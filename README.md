@@ -8,9 +8,13 @@ pyPRISMclimate
 
 ## Required Data
 PRISM modeled precipitation and temperature data, for precipitation and snow calculations
+
 USGS river gauge data
+
 SNOTEL data to verify precipitation calculations?
+
 Geology data for infiltration (gSSURGO?), TBD
+
 Evapotranspiration data (this could be LandSat 8 and 9, but obviously those only work on cloud-free days and rain typically means clouds. could provide a regional estimate though?
 
 ## Intended Project Structure
