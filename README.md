@@ -8,6 +8,8 @@ This project aims to create a JupyterNotebook workflow for performing a precipit
 
 ## Background Information
 
+The goal of this project is to get a window into the accuracy of flood gauges during extreme precipitation events, with the hypothesis being that sediment deposition or scour could change the channel cross-sectional area, which would introduce error to the gauges. However, the accuracy of other datasets such as modeled precipitation data or snowfall could also be explored with this analysis. 
+
 ## Objectives
 Use a mass-balance study to determine the accuracy of USGS gauges during extreme precipitation events, using the 2021 atmospheric river flooding on the Nooksack as an example. The final product will probably look like a time series, daily modeled runoff vs. daily measured runoff.
 
@@ -35,8 +37,12 @@ https://earlywarning.usgs.gov/ssebop/modis/daily/626
 ## Required Packages
 pyPRISMclimate allows for the streamlining of downloading weather data - https://sdtaylor.github.io/pyPRISMClimate/
 
-
-
+rasterio/rioxarray for raster data set analysis
+numpy
+geopandas
+glob
+os
+matplotlib
 
 ## Intended Project Structure
 1. Notebook 1: Responsible for data retrieval and management. For example: Download PRISM precipitation data, mask data by shapefile or by a DEM raster file
