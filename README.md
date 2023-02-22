@@ -37,12 +37,12 @@ https://earlywarning.usgs.gov/ssebop/modis/daily/626
 ## Required Packages
 pyPRISMclimate allows for the streamlining of downloading weather data - https://sdtaylor.github.io/pyPRISMClimate/
 
-rasterio/rioxarray for raster data set analysis
-numpy
-geopandas
-glob
-os
-matplotlib
+rasterio/rioxarray for raster data set analysis  
+numpy  
+geopandas  
+glob  
+os  
+matplotlib  
 
 ## Intended Project Structure
 1. Notebook 1: Responsible for data retrieval and management. For example: Download PRISM precipitation data, mask data by shapefile or by a DEM raster file
