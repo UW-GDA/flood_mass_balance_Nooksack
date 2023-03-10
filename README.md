@@ -11,9 +11,13 @@ This project aims to create a JupyterNotebook workflow for performing a precipit
 The goal of this project is to get a window into the accuracy of flood gauges during extreme precipitation events, with the hypothesis being that sediment deposition or scour could change the channel cross-sectional area, which would introduce error to the gauges. However, the accuracy of other datasets such as modeled precipitation data or snowfall could also be explored with this analysis. 
 
 ## Objectives
-Use a mass-balance study to determine the accuracy of USGS gauges during extreme precipitation events, using the 2021 atmospheric river flooding on the Nooksack as an example. The final product will probably look like a time series, daily modeled runoff vs. daily measured runoff.
+Use a mass-balance study to determine the accuracy of USGS gauges during extreme precipitation events, using the 2021 atmospheric river flooding on the Nooksack as an example. The final product is a graph showing the % difference between modeled runoff and measured discharge over time.
 
-This project is developing through multiple levels of complexity. The bare minimum in general is calculating the volume of precipitation minus the volume of discharge. My minimum goal is to at least incorporate snow deposition, and do some verification of those numbers with SNOTEL stations. Infiltration would make this workflow more universally reproducible, but the soils are typically assumed to be saturated before the atmospheric river in the Nooksack so it isn't super relevant for this use-case. Evapotranspiration is something that I need to do more research into, to see if it would even make an impact with cloud cover. Infiltration and evapotranspiration are both "hopefuls" more than minimums. The 'extra mile' goal is to run the scripts a few times for a sensitivity analysis to see how snow, infiltration and evaporation make significant impacts. A more complex model is not necessarily a better model if the added parameters don't make a big impact and they add a lot of uncertainty (really coarse geology data could be relevant here).
+At the present, this project involves downloading PRISM modeled climate data constrained by a USGS gage basin, calculating snow fall from precipitation and temperature, and then using precipitation and snow accumulation to calculate the projected runoff in the system. This is then compared to the USGS gage discharge volume from the same period. The main notebooks rely on PRISM, but there is a data_alternative notebook which explores Daymet instead.
+
+General model data verification information needs to be added to the workflow, including using CO-OP and SNOTEL stations to verify precipitation and snow.
+
+This project is still in development. Adding infiltration runoff removal would make this workflow more universally reproducible, but the soils are typically assumed to be saturated before the atmospheric river in the Nooksack so it isn't relevant for this use-case at this time. Evapotranspiration is something that I need to do more research into, to see if it would even make an impact with cloud cover. It may not make an impact during a winter-season storm in the PNW, but could matter more for other ecosystem. A more complex model is not necessarily a better model if the added parameters don't make a big impact and they add a lot of uncertainty (really coarse geology data could be relevant here).
 
 
 ## Required Data
@@ -49,12 +53,12 @@ Not in use, but may be incorporated in the future:
 * glob, os, and sys for managing files
 
 ## Intended Project Structure
-1. Notebook 1: Responsible for data retrieval and management. For example: Download PRISM precipitation data, mask data by shapefile or by a DEM raster file
-2. Notebook 2: Calculates runoff loss due to snow
-3. Notebook 3: Calculates runoff loss due to infiltration
-4. Notebook 4: Calculates runoff loss due to evapotranspiration
-5. Notebook 5: Calculates runoff modeled - runoff measured, to find discrepancies
-
+1. data_download.ipynb: Responsible for data retrieval and management. For example: Download PRISM precipitation data, mask data by shapefile or by a DEM raster file
+2. snow_volume_calculations.ipynb: Calculates runoff loss due to snow
+3. Does not exist yet: Notebook 3: Calculates runoff loss due to infiltration
+4. Does not exist yet: Notebook 4: Calculates runoff loss due to evapotranspiration
+5. mass_balance.ipynb: Calculates runoff modeled - runoff measured, to find discrepancies
+note there is currently also the data_alternative.ipynb which explores Daymet climate data as an alternative to PRISM
 
 # Current Project Status - 3/10/2023
 
