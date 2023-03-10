@@ -44,7 +44,8 @@ Not in use, but may be incorporated in the future:
   * https://earlywarning.usgs.gov/ssebop/modis/daily/626
 
 ## Required Packages
-* pyPRISMclimate for downloading weather data - https://sdtaylor.github.io/pyPRISMClimate/
+* pyPRISMclimate for downloading climate data - https://sdtaylor.github.io/pyPRISMClimate/
+* pyDaymet for downloading climate data
 * hydrofunctions for downloading streamflow and basin metadata
 * rasterio for raster data set analysis  
 * xarray for data set analysis
