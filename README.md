@@ -19,22 +19,22 @@ This project can have levels of complexity. The bare minimum in general is calcu
 ## Required Data
 Currently in use:
 * PRISM modeled precipitation and temperature data, for precipitation and snow calculations
- * https://prism.oregonstate.edu/recent/monthly.php
+  * https://prism.oregonstate.edu/recent/monthly.php
 
 * USGS river gauge data
- * https://waterdata.usgs.gov/nwis/rt
+  * https://waterdata.usgs.gov/nwis/rt
 
 Not in use, but may be incorporated in the future:
 * COOP and SNOTEL data to verify precipitation and snow depth modeled values
- * https://www.ncei.noaa.gov/products/land-based-station/cooperative-observer-network
- * https://wrcc.dri.edu/snotel/
+  * https://www.ncei.noaa.gov/products/land-based-station/cooperative-observer-network
+  * https://wrcc.dri.edu/snotel/
 
 * Geology data for infiltration (gSSURGO?), maybe land use (there are some papers on this), TBD
- * https://mrdata.usgs.gov/geology/state/map-us.html
- * https://www.usgs.gov/centers/eros/science/national-land-cover-database
+  * https://mrdata.usgs.gov/geology/state/map-us.html
+  * https://www.usgs.gov/centers/eros/science/national-land-cover-database
 
 * Evapotranspiration data (this could be LandSat 8 and 9, but obviously those only work on cloud-free days and rain typically means clouds. could provide a regional estimate though?
- * https://earlywarning.usgs.gov/ssebop/modis/daily/626
+  * https://earlywarning.usgs.gov/ssebop/modis/daily/626
 
 ## Required Packages
 * pyPRISMclimate for downloading weather data - https://sdtaylor.github.io/pyPRISMClimate/
