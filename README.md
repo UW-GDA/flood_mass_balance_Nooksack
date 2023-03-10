@@ -35,14 +35,13 @@ Evapotranspiration data (this could be LandSat 8 and 9, but obviously those only
 https://earlywarning.usgs.gov/ssebop/modis/daily/626
 
 ## Required Packages
-pyPRISMclimate allows for the streamlining of downloading weather data - https://sdtaylor.github.io/pyPRISMClimate/
-
-rasterio/rioxarray for raster data set analysis  
-numpy  
-geopandas  
-glob  
-os  
-matplotlib  
+* pyPRISMclimate for downloading weather data - https://sdtaylor.github.io/pyPRISMClimate/
+* hydrofunctions for downloading streamflow and basin metadata
+* rasterio for raster data set analysis  
+* xarray for data set analysis
+* numpy, pandas, and matplotlib for general calculations and plotting
+* geopandas for geodataframes and retrieving shapefiles
+* glob, os, and sys for managing files
 
 ## Intended Project Structure
 1. Notebook 1: Responsible for data retrieval and management. For example: Download PRISM precipitation data, mask data by shapefile or by a DEM raster file
@@ -50,3 +49,19 @@ matplotlib
 3. Notebook 3: Calculates runoff loss due to infiltration
 4. Notebook 4: Calculates runoff loss due to evapotranspiration
 5. Notebook 5: Calculates runoff modeled - runoff measured, to find discrepancies
+
+
+# Current Project Status - 3/10/2023
+
+**Data download, snow volume calculations, and mass balance files are operational!**
+
+There is a **lot of discrepancy** in the final calculated runoff compared to the measured river discharge. Some potential ways to address that, and find where the error is coming from:
+ * Use CO-OP stations to verify/unverify the accuracy of PRISM dataset
+ * Use SNOTEL data to test the snow accumulation/melt
+ * Try some different gridded precipitation datasets, like Daymet (1 km resolution) and Livneh (6 km resolution)
+ * Test on another watershed or during another, smaller storm that occurs during the summer when we wouldn't anticipate significant snow accumulation
+ 
+ Beyond the data verification process suggested above, next steps include:
+ * Calculating and subtracting baseflow
+ * Accounting for infiltration and evapotranspiration
+ * Testing on other watersheds (how broadly does this process apply?)
