@@ -45,12 +45,12 @@ Not in use, but may be incorporated in the future:
 
 ## Required Packages
 * pyPRISMclimate for downloading climate data - https://sdtaylor.github.io/pyPRISMClimate/
-* pyDaymet for downloading climate data
-* hydrofunctions for downloading streamflow and basin metadata
-* rasterio for raster data set analysis  
-* xarray for data set analysis
+* pyDaymet for downloading climate data - https://docs.hyriver.io/readme/pydaymet.html
+* hydrofunctions for downloading streamflow and basin metadata - https://hydrofunctions.readthedocs.io/en/master/
+* rasterio for raster data set analysis - https://rasterio.readthedocs.io/en/stable/
+* xarray for data set analysis - https://docs.xarray.dev/en/stable/
 * numpy, pandas, and matplotlib for general calculations and plotting
-* geopandas for geodataframes and retrieving shapefiles
+* geopandas for geodataframes and retrieving shapefiles - https://geopandas.org/en/stable/
 * glob, os, and sys for managing files
 
 ## Intended Project Structure
